@@ -1,0 +1,88 @@
+:root {
+    --clr-primary-200: hsl(250, 70%, 35%);
+    --clr-primary-400: hsl(250, 70%, 50%);
+    --clr-primary-600: hsl(250, 70%, 65%);
+    --clr-complementary-200: hsl(60 70% 35%);
+    --clr-complementary-400: hsl(60 70% 50%);
+    --clr-complementary-600: hsl(60 70% 65%);
+    --clr-error: hsl(0, 65%, 45%);
+    --clr-placeholder: hsl(0, 0%, 70%);
+    --clr-text-100: hsl(0, 0%, 10%);
+    --clr-text-200: hsl(0, 0%, 12.5%);
+    --clr-text-300: hsl(0, 0%, 17.5%);
+    --clr-text-400: hsl(0, 0%, 20%);
+    --clr-text-500: hsl(0, 0%, 30%);
+    --clr-text-600: hsl(0, 0%, 40%);
+    --clr-text-700: hsl(0, 0%, 80%);
+    --clr-bg-200: hsl(0 0% 10%);
+    --clr-bg-300: hsl(0 0% 30%);
+    --clr-bg-400: hsl(0 0% 50%);
+    --clr-bg-500: hsl(0 0% 70%);
+    --clr-bg-600: hsl(0 0% 90%);
+
+    --textsize-l: 18px;
+    --textsize-m: 16px;
+    --textsize-standard: 14px;
+    --textsize-s: 12px;
+    --textsize-xs: 10px;
+
+    --inner-max-width: 960px;
+
+    --dark-clr-primary-600: hsl(60 70% 35%);
+    --dark-clr-primary-400: hsl(60 70% 50%);
+    --dark-clr-primary-200: hsl(60 70% 65%);
+    --dark-clr-complementary-600: hsl(250, 70%, 35%);
+    --dark-clr-complementary-400: hsl(250, 70%, 50%);
+    --dark-clr-complementary-200: hsl(250, 70%, 65%);
+    --dark-clr-error: hsl(0, 65%, 45%);
+    --dark-clr-placeholder: hsl(0, 0%, 70%);
+    --dark-clr-text-700: hsl(0, 0%, 10%);
+    --dark-clr-text-600: hsl(0, 0%, 12.5%);
+    --dark-clr-text-500: hsl(0, 0%, 17.5%);
+    --dark-clr-text-400: hsl(0, 0%, 20%);
+    --dark-clr-text-300: hsl(0, 0%, 30%);
+    --dark-clr-text-200: hsl(0, 0%, 40%);
+    --dark-clr-text-100: hsl(0, 0%, 80%);
+    --dark-clr-bg-600: hsl(0 0% 10%);
+    --dark-clr-bg-500: hsl(0 0% 30%);
+    --dark-clr-bg-400: hsl(0 0% 50%);
+    --dark-clr-bg-300: hsl(0 0% 70%);
+    --dark-clr-bg-200: hsl(0 0% 90%);
+}
+
+.dark-theme {
+    --clr-primary-200: var(--dark-clr-primary-200);
+    --clr-primary-400: var(--dark-clr-primary-400);
+    --clr-primary-600: var(--dark-clr-primary-600);
+    --clr-complementary-200: var(--dark-clr-complementary-200);
+    --clr-complementary-400: var(--dark-clr-complementary-400);
+    --clr-complementary-600: var(--dark-clr-complementary-600);
+    --clr-error: var(--dark-clr-error);
+    --clr-placeholder: var(--dark-clr-placeholder);
+    --clr-text-100: var(--dark-clr-text-100);
+    --clr-text-200: var(--dark-clr-text-200);
+    --clr-text-300: var(--dark-clr-text-300);
+    --clr-text-400: var(--dark-clr-text-400);
+    --clr-text-500: var(--dark-clr-text-500);
+    --clr-text-600: var(--dark-clr-text-600);
+    --clr-text-700: var(--dark-clr-text-700);
+    --clr-bg-200: var(--dark-clr-bg-200);
+    --clr-bg-300: var(--dark-clr-bg-300);
+    --clr-bg-400: var(--dark-clr-bg-400);
+    --clr-bg-500: var(--dark-clr-bg-500);
+    --clr-bg-600: var(--dark-clr-bg-600);
+}
+
+/*
+Fallback to SCSS-variables --> :root not available for media queries.
+Media queries aren't attached to HTML elements at all. These declarations are processed while your CSS is being parsed, so it won't know to look to the :root and pull in the variable values.
+
+When speaking of variables you could also like:
+The env() CSS function can be used to insert the value of a user-agent defined environment variable into your CSS, in a similar fashion to the var() function and custom properties. 
+The difference is that, as well as being user-agent defined rather than user-defined, environment variables are globally scoped to a document, whereas custom properties are scoped 
+to the element(s) on which they are declared.
+https://developer.mozilla.org/en-US/docs/Web/CSS/env
+*/
+$--breakpoint-xs: 520px;
+$--breakpoint-m: 960px;
+$--breakpoint-l: 1200px;

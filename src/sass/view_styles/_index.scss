@@ -1,0 +1,103 @@
+#layout {
+    display: grid;
+    grid-auto-rows: auto;
+}
+    header {
+        position: sticky;
+            top: 0;
+            z-index: 1;
+        display: flex;
+        justify-content: center;
+        padding: var(--textsize-l) 0;
+
+        background: var(--clr-bg-600);
+        transition: background-color .2s ease-in-out;
+
+        &.sticking {
+            background: var(--clr-bg-300);
+
+            & nav a {
+                color: var(--clr-complementary-400);
+            }
+        }
+    }
+        .inner-header {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--textsize-l);
+            width: 100%;
+            max-width: var(--inner-max-width);
+            padding: 0 1rem;
+            
+            color: var(--clr-text-200);
+        }
+            .logo {
+
+            }
+            nav {
+                display: flex;
+                gap: var(--textsize-l);
+
+                a {
+                    font-family: 'Roboto', sans-serif;
+                    text-decoration: none;
+                    transition: .2s ease-in-out;
+                    color: var(--clr-primary-200);
+                    font-weight: 600;
+                    white-space: nowrap;
+                
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+        main {
+            max-width: var(--inner-max-width);
+            padding: 1rem;
+
+            color: var(--clr-text-200);
+            background-color: var(--clr-bg-400);
+        }
+            section {
+                &.banner {
+
+                    & h1 {
+                        font-size: 30px;
+                        text-wrap: balance;
+                    }
+                }
+
+                &.articles article {
+                    display: grid;
+                    grid-gap: var(--textsize-l);
+
+                    @media all and (min-width: $--breakpoint-m) {
+                        grid: auto / 200px 1fr;
+                    }
+
+                    & h3 {
+                        position: sticky;
+                            top: 0;
+                        align-self: start;
+                    }
+                }
+            }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 80px 0;
+        
+        background: var(--clr-bg-300);
+        color: var(--clr-text-200);
+    }
+        .inner-footer {
+            width: 100%;
+            max-width: var(--inner-max-width);
+            padding: 0 1rem;
+        }
